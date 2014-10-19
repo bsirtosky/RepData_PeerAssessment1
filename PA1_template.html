@@ -91,6 +91,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </div>
 <div id="imputing-missing-values" class="section level2">
 <h2>Imputing missing values</h2>
+<p>Missing values are obtained by looking only at complete cases and getting the mean number of steps for each interval from those cases and updating the missing values based on their associated interval value.</p>
 <pre class="r"><code>    missingCount &lt;- nrow(df[!good,])
     df4 &lt;- merge(df, df3, by.x = &quot;interval&quot;, by.y = &quot;Interval&quot;)
     df4$steps[is.na(df4$steps)] &lt;- df4$MeanSteps[is.na(df4$steps)]

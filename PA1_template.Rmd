@@ -44,6 +44,7 @@ The median total number of steps taken per day is `r medianSteps`.
 The most active time, on average, is `r mostActiveInterval`.
 
 ## Imputing missing values
+Missing values are obtained by looking only at complete cases and getting the mean number of steps for each interval from those cases and updating the missing values based on their associated interval value.
 ```{r missingvalues}
     missingCount <- nrow(df[!good,])
     df4 <- merge(df, df3, by.x = "interval", by.y = "Interval")

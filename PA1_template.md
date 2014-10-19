@@ -53,6 +53,7 @@ The median total number of steps taken per day is 10765.
 The most active time, on average, is 835.
 
 ## Imputing missing values
+Missing values are obtained by looking only at complete cases and getting the mean number of steps for each interval from those cases and updating the missing values based on their associated interval value.
 
 ```r
     missingCount <- nrow(df[!good,])
